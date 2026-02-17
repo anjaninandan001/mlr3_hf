@@ -5,7 +5,7 @@
 # mlr3hf
 
 **mlr3hf** is a lightweight R package that allows you to download tabular datasets from the Hugging Face Hub and convert them directly into `mlr3` Task objects.
-
+## This package is currently a minimal prototype. Ongoing development focuses on improving scalability and ensuring controlled memory (RAM) usage.
 It acts as a simple bridge between:
 - 🤗 Hugging Face datasets  
 - 📊 The `mlr3` machine learning framework in R  
