@@ -50,7 +50,7 @@ devtools::test()
 
 ## 📦 Main Function: htsk()
 ```r
-htsk(repo_id, filename, target)
+htsk(dataset, config, target)
 ```
 
 ### Arguments
@@ -69,82 +69,6 @@ The function:
 
 ---
 
-## 📊 Example: Classification
-```r
-library(mlr3hf)
-library(mlr3)
-
-task <- htsk(
-  repo_id = "scikit-learn/iris",
-  filename = "Iris.csv",
-  target = "Species"
-)
-
-task
-```
-
-Output:
-```
-<TaskClassif>
-```
-
-You can now train a model:
-```r
-learner <- lrn("classif.rpart")
-learner$train(task)
-```
-
----
-
-## 📈 Example: Regression
-
-If the target column is numeric, a regression task is created automatically.
-```r
-task <- htsk(
-  repo_id = "scikit-learn/iris",
-  filename = "Iris.csv",
-  target = "SepalLengthCm"
-)
-
-task
-```
-
-Output:
-```
-<TaskRegr>
-```
-
----
-
-## ⚠️ Current Limitations
-
-- Supports tabular datasets only (CSV, JSON, Parquet, RDS)
-- Requires explicit target column
-- Does not support image datasets
-- Does not use the Hugging Face Python datasets library
-- No automatic train/test split handling yet
-
----
-
-## 🧠 Design Philosophy
-
-- Pure R implementation
-- No Python
-- No reticulate
-- Minimal dependencies
-- Simple and explicit behavior
-
----
-
-## 📁 Project Structure
-```
-R/           → Core implementation  
-tests/       → Unit tests  
-vignettes/   → Usage guide  
-man/         → Function documentation  
-```
-
----
 
 ## 📜 License
 
