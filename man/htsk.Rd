@@ -34,8 +34,8 @@ target column:
 \examples{
 \dontrun{
 task <- htsk(
-  repo_id = "scikit-learn/iris",
-  filename = "Iris.csv",
+  dataset = "scikit-learn/iris",
+  config = "default",
   target = "Species"
 )
 task
