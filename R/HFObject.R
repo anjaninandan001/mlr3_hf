@@ -72,7 +72,7 @@ HFObject = R6::R6Class(
         )
 
         message(sprintf(
-          "[mlr3hf] Cache directory reset: '%s' → '%s'",
+          "Cache directory reset: '%s' -> '%s'",
           old, private$.cache_dir
         ))
 
