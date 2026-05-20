@@ -9,12 +9,13 @@ source("R/cache.R")
 source("R/download_parquet.R")
 source("R/HFObject.R")
 source("R/HFData.R")
-librar(mlr3)
+source("R/utils.R")
+library(mlr3)
 ```
 ## Now it can make task
 
 ```r
-dt=htsk(dataset=scikit-learn/iris", config="default", target="Species")
+dt=htsk(dataset="scikit-learn/iris", config="default", target="Species")
 task=as_task(dt)
 task
 ```
